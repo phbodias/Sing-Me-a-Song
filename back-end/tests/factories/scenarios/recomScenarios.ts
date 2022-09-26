@@ -1,9 +1,9 @@
-import { prisma } from "../../../src/database";
 import { Recommendation as IRecommendationData } from "@prisma/client";
+import { prisma } from "../../../src/database.js";
 import {
   recommendationFac,
   recommendationFacWithScore,
-} from "../createRecomFacs/rightRecomFactory";
+} from "../createRecomFacs/rightRecomFactory.js";
 
 export type TRecomBody = Omit<IRecommendationData, "id" | "score">;
 export type TRecomAmount = Omit<IRecommendationData, "id">;
