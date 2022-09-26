@@ -4,9 +4,7 @@
 
 # Description
 
-Sing me a song is an application for anonymous song recommendation. However, the goal here was test development.
-
-</br>
+Sing me a song is an application for anonymous song recommendation. However, the goal here is to practice tests (integration, unity and e2e).
 
 ## Environment Variables
 
