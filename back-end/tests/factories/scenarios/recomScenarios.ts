@@ -1,4 +1,4 @@
-import { prisma } from "../../../../src/database";
+import { prisma } from "../../../src/database";
 import { Recommendation as IRecommendationData } from "@prisma/client";
 import {
   recommendationFac,
@@ -31,7 +31,7 @@ export async function createManyRecoms() {
   return await prisma.recommendation.createMany({ data: recoms });
 }
 
-export async function createRecomsWithScores(){
+export async function createRecomsWithScores() {
   const recoms = [];
   while (recoms.length < 10) {
     const recom: TRecomAmount = await recommendationFacWithScore();
@@ -39,5 +39,5 @@ export async function createRecomsWithScores(){
     if (!repeatedName) recoms.push(recom);
   }
 
-  return await prisma.recommendation.createMany({data: recoms});
+  return await prisma.recommendation.createMany({ data: recoms });
 }

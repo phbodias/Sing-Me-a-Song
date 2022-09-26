@@ -3,15 +3,15 @@ import { prisma } from "../../src/database";
 import { Recommendation as IRecommendationData } from "@prisma/client";
 import supertest from "supertest";
 import app from "../../src/app";
-import { recommendationFac } from "./factories/createRecomFacs/rightRecomFactory";
-import wrongDomainRecomFac from "./factories/createRecomFacs/wrongRecomFactorie";
+import { recommendationFac } from "../factories/createRecomFacs/rightRecomFactory";
+import wrongDomainRecomFac from "../factories/createRecomFacs/wrongRecomFactorie";
 import {
   createManyRecoms,
   createRecomsWithScores,
   insertRecom,
   recomToWillBeDeleted,
   TRecomBody,
-} from "./factories/scenarios/recomScenarios";
+} from "../factories/scenarios/recomScenarios";
 
 beforeEach(async () => {
   await prisma.$executeRaw`TRUNCATE TABLE recommendations RESTART IDENTITY CASCADE;`;
