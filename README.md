@@ -44,19 +44,19 @@ Create database
   npx prisma migrate dev
 ```
 
-To run integration tests
+To run integration tests (in a back-end terminal)
 
 ```bash
   npm run test:integration
 ```
 
-To run unit tests
+To run unit tests (in a back-end terminal)
 
 ```bash
   npm run test:unit
 ```
 
-To run E2E tests:
+To run E2E tests: (in a front-end terminal)
 
 In the back-end directory and start the server
 
